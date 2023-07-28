@@ -1,10 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="AppMain">
+    <div>
+    <searchComponet @location="getAddressData"></searchComponet>
+    <weatherDataDisplay :data="data" :src="finalSrc"></weatherDataDisplay>
+    </div>
+  </div>
 </template>
+<script>
+import weatherDataDisplay from './components/weatherDataDisplay'
+import weatherDataMixin from './mixin/weatherDataMixin'
+import searchComponet from './components/searchComponent'
+export default {
+  components:{searchComponet,weatherDataDisplay},
+  mixins:[weatherDataMixin],
+    methods:{
+       getAddressData:function(lan){
+        this.getWeatherData(lan)
+        console.log(lan)
+      }
+    }
+}
+</script>
+
 
 <style lang="scss">
 #app {
@@ -13,6 +30,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top:40px;
 }
 
 nav {
@@ -26,5 +44,10 @@ nav {
       color: #42b983;
     }
   }
+
 }
+#AppMain{
+    display: flex;
+  justify-content: center;
+  }
 </style>
