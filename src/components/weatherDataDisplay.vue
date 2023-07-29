@@ -1,5 +1,5 @@
 <template>
-    <div id="wrapperDiv">
+    <div id="wrapperDiv" class = "shadow-lg p-3 mb-5 rounded">
     <div v-if="data" id="div1" style="float:left">
         <div id="info">
         <small id="date">{{getDate}}</small>

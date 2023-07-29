@@ -35,11 +35,14 @@ export default {
     methods:{
        getAddressData:async function(addressData,placeResultData,id){
         console.log("inside data")
+        
         this.address=addressData;
+        addressData=""
         console.log(this.address.latitude);
         this.lat=this.address.latitude
         this.lan=this.address.longitude
         console.log(id)
+        this.data=""
         this.$emit('location',{lan:this.lan,lat:this.lat})
       }
     }
