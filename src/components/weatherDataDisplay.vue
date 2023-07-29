@@ -15,7 +15,7 @@
 </div>
     <div v-if="data"  id="div2" style=";float:left">
         <div>
-        <strong><small>Feels like {{data["data"]['temp'].toFixed(1)}} , {{data["data"]["weather"][0]["main"]}} , {{data['data']['weather'][0]['description']}} </small></strong>
+        <strong><small>Feels like {{data["data"]['temp'].toFixed(1)}} , {{data["data"]["weather"][0][0]["main"]}} , {{data['data']['weather'][0][0]['description']}} </small></strong>
         </div>
         <small>Humidity : <strong>{{data["data"]["humidity"]}}%</strong></small><br>
         <small>Pressure : <strong>{{data["data"]["pressure"]/100}}/mph</strong></small><br>

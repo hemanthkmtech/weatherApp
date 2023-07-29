@@ -1,6 +1,7 @@
 <template>
   <div id="AppMain">
-    <div>
+    <div id="mainDiv">
+      <h1 id="tag" class = "shadow-lg p-3 mb-5 rounded">Open Weather</h1>
     <searchComponet @location="getAddressData"></searchComponet>
     <weatherDataDisplay :data="data" :src="finalSrc"></weatherDataDisplay>
     </div>
@@ -50,4 +51,16 @@ nav {
     display: flex;
   justify-content: center;
   }
+  #tag{
+    width:300px;
+    margin-left:100px;
+    background-color:rgba(245, 245, 245, 0.763) ;
+  }
+#mainDiv{
+  width:500px;
+  height:400px;
+  border: 2px solid;
+  border-radius: 30px;
+  background-color: rgba(245, 245, 245, 0.763);
+}
 </style>

@@ -48,6 +48,8 @@ export default {
 <style scoped>
   .form-control{
     width:140%;
-    margin-left: 20px;
+    margin-left: 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 </style>
