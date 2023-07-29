@@ -15,7 +15,7 @@ import axios from 'axios'
             const fileFormat = new FormData();
             fileFormat.append('lat',geoCode.lat);
             fileFormat.append('lan',geoCode.lan);
-            axios.post("http://localhost:8080/",fileFormat).then(res=>{
+            axios.post("http://18.169.186.30:8080/",fileFormat).then(res=>{
             this.data=res
             this.finalSrc=this.src+this.data["data"]["weather"][0]["icon"]+"@2x.png"
             console.log(this.data["data"])
